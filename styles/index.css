@@ -1,0 +1,61 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+
+@font-face {
+    font-family: GrifoL;
+    src: url(/fonts/GrifoL.off);
+}
+
+body {
+    font-family: GrifoL, serif;
+}
+
+.bg-accent-10-8 {
+    background: #b0b0d4;
+    background: linear-gradient(0deg, #ebeff1 0%, #ebeff1 65%, #b0b0d4 100%);
+}
+.bg-accent-5-10 {
+    background: #0a0d20;
+    background: linear-gradient(0deg, #b0b0d4 0%, #0a0d20 40%, #0a0d20 100%);
+}
+
+.bg-accent-8-9 {
+    background: #ebeff1;
+    background: linear-gradient(0deg, #736f6e 0%, #ebeff1 100%);
+}
+.bg-accent-9-5 {
+    background: #736f6e;
+    background: linear-gradient(0deg, #0a0d20 0%, #736f6e 100%);
+}
+
+
+.st0{fill:#ABE8F3;}
+.st1{fill:#108095;}
+.st2{fill:#12C4A4;}
+.st3{fill:#E6F8FB;}
+.st4{fill:#82DCED;}
+.st5{fill:#B37612;}
+.st6{fill:#EE2B74;}
+.st7{fill:#BBEEE5;}
+.st8{fill:#8DE3D3;}
+.st9{fill:#BF5046;}
+.st10{fill:#BFA915;}
+.st11{fill:#F799BD;}
+.st12{fill:#C0B1FF;}
+.st13{fill:#C52061;}
+.st14{fill:#FABEA9;}
+.st15{fill:#FAC2D7;}
+.st16{fill:#2EC5E1;}
+.st17{fill:#FF6A5D;}
+.st18{fill:#FFD999;}
+.st19{fill:#FFED77;}
+.st20{opacity:0.1;clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
+.st21{fill:#331D8F;}
+.st22{fill:#6D4CFF;}
+.st23{fill:#009180;}
+.st24{fill:#00AC98;}
+.st25{fill:#71DCC8;}
