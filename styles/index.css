@@ -6,12 +6,12 @@
 
 
 @font-face {
-    font-family: GrifoL;
-    src: url(/fonts/GrifoL.off);
+    font-family: GrifoS;
+    src: url(/fonts/GrifoS.otf);
 }
 
 body {
-    font-family: GrifoL, serif;
+    font-family: GrifoS, serif;
     background-color: #74625b;
 }
 

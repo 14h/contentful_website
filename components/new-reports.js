@@ -7,7 +7,7 @@ export default function NewReports() {
                 Key Findings Report now live!
             </h1>
             <div
-                className="text-2xl md:text-4xl font-hairline tracking-tighter leading-tight md:pr-8 my-12 max-w-full md:max-w-screen-lg mx-auto text-accent-3">
+                className="text-2xl md:text-4xl font-hairline leading-tight md:pr-8 my-12 max-w-full md:max-w-screen-lg mx-auto text-accent-3">
                 The GDS Special Edition on COVID-19 was developed as part of a global effort to better understand the
                 impact of the pandemic on people’s lives with a specific focus on the use of alcohol and other drugs,
                 mental health and relationships. Over 55,000 people took part. The survey ran for 7 weeks in (May and -
