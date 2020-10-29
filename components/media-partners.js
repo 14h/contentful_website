@@ -1,10 +1,8 @@
 export default function MediaPartners() {
     return (
         <section
-            className="bg-accent-10-8 md:h-1/2 relative p-12 text-center pb-40"
+            className="bg-no-repeat bg-accent-10-8 md:h-1/2 relative p-12 text-center pb-40"
         >
-
-
             <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8 text-center z-10">
                 Media Partners
             </h1>

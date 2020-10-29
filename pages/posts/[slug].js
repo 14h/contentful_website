@@ -6,7 +6,6 @@ import PostBody from '../../components/post-body'
 import Blog from '../../components/blog'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
-import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import {getAllPostsWithSlug, getPostAndMorePosts} from '../../lib/api'
 import PostTitle from '../../components/post-title'
@@ -40,7 +39,6 @@ export default function Post({post, morePosts}) {
                             />
                             <PostBody content={post.content}/>
                         </article>
-                        <SectionSeparator/>
                         {morePosts && morePosts.length > 0 && (
                             <Blog posts={morePosts}/>
                         )}

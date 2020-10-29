@@ -19,9 +19,9 @@ export default function WhyBanner() {
                 GDS creates beautiful data reports, digital health assessment tools and free harm reduction resources that aim to make drug use safer regardless of the legal status of the drug GDS reaches hidden, sentinel and hard to reach populations and puts you on top of emerging drug trends in your country and major cities.
             </div>
             <div className='flex flex-col md:flex-row md:justify-center align-center max-w-full md:max-w-screen-lg mx-auto'>
-                <div className='relative h-56 w-56 bg-accent-6 m-3 mx-auto text-center md:m-12 rounded-lg p-3 pt-8 text-xl hover:bg-accent-3 duration-200 transition-colors cursor-pointer'>
-                    <div>Learn more about GDS</div>
-                    <div className='absolute bottom-0 left-0 right-0 w-full text-center text-accent-4 text-xl font-bold italic'>DOWNLOAD OUR PDF BROCHURE</div>
+                <div className='relative h-56 w-56 bg-accent-10 box-shadow-accent-5 m-3 mx-auto text-center md:m-12 rounded-lg p-3 pt-8 text-xl  duration-200 transition-colors cursor-pointer'>
+                    <div className='text-accent-5'>Learn more about GDS</div>
+                    <div className='absolute bottom-0 left-0 right-0 w-full text-center text-accent-3 text-xl font-bold italic'>DOWNLOAD OUR PDF BROCHURE</div>
                 </div>
             </div>
             <img

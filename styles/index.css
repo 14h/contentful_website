@@ -12,30 +12,51 @@
 
 body {
     font-family: GrifoL, serif;
+    background-color: #74625b;
 }
 
 .bg-accent-10-8 {
     background: #b0b0d4;
-    background: linear-gradient(0deg, #ebeff1 0%, #ebeff1 65%, #b0b0d4 100%);
+    background-image: url("/images/dust-accent-5.png");
+    background-image: url("/images/dust-accent-5.png"), linear-gradient(0deg, #ebeff1 0%, #ebeff1 65%, #b0b0d4 100%);
 }
 .bg-accent-5-10 {
     background: #0a0d20;
-    background: linear-gradient(0deg, #b0b0d4 0%, #0a0d20 40%, #0a0d20 100%);
+    background-image: url("/images/dust-accent-3.png");
+    background-image: url("/images/dust-accent-3.png"), linear-gradient(0deg, #b0b0d4 0%, #0a0d20 40%, #0a0d20 100%);
 }
 
 .bg-accent-8-9 {
     background: #ebeff1;
-    background: linear-gradient(0deg, #736f6e 0%, #ebeff1 100%);
+    background-image: url("/images/dust-accent-5-3.png");
+    background-image: url("/images/dust-accent-5-3.png"), linear-gradient(0deg, #736f6e 0%, #ebeff1 100%);
 }
 .bg-accent-9-5 {
     background: #736f6e;
-    background: linear-gradient(0deg, #0a0d20 0%, #736f6e 100%);
+    background-image: url("/images/dust-accent-3-white.png");
+    background-image: url("/images/dust-accent-3-white.png"), linear-gradient(0deg, #0a0d20 0%, #736f6e 100%);
+}
+.bg-accent-11-transparent {
+    background: #74625bAA;
+    background: linear-gradient(0deg, transparent 0%, #74625bAA 100%);
+}
+.bg-accent-transparent-12 {
+    background: transparent;
+    background: linear-gradient(0deg, #74625b88 0%, transparent 100%);
 }
 
-.border-rounder-accent-6 {
-    box-shadow: 0 0 0 0.3em #74625b;
+
+.box-shadow-accent-5 {
+    box-shadow: 0 15px 31px 0 #0a0d2077;
 }
 
+.top-20 {
+    top: 5rem;
+}
+
+.blur {
+    filter: blur(4px);
+}
 
 .st0{fill:#ABE8F3;}
 .st1{fill:#108095;}

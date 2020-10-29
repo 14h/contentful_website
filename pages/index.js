@@ -7,6 +7,7 @@ import Head from 'next/head'
 import NewReports from "../components/new-reports";
 import MediaPartners from "../components/media-partners";
 import WhyBanner from "../components/why-banner";
+import Header from "../components/header";
 
 export default function Index({allPosts}) {
     const posts = allPosts.slice(0)
@@ -17,6 +18,7 @@ export default function Index({allPosts}) {
                     <title>Global Drugs Survey</title>
                 </Head>
                 <Container>
+                    <Header />
                     <Intro/>
                     <NewReports/>
                     <MediaPartners/>

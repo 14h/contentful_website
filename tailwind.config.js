@@ -6,8 +6,8 @@ module.exports = {
                 dark: {raw: "(prefers-color-scheme: dark)"}
             },
             colors: {
-                'accent-1': '#010101',
-                'accent-2': '#121212',
+                'accent-1': '#74625b',
+                'accent-2': '#16192c',
                 'accent-3': '#764a3b',
                 'accent-4': '#16192c',
                 'accent-5': '#0a0d20',
@@ -16,6 +16,8 @@ module.exports = {
                 'accent-8': '#ebeff1',
                 'accent-9': '#736f6e',
                 'accent-10': '#b0b0d4',
+                'accent-11': '#74625b88',
+                'accent-12': '#74625bBB',
                 success: '#0070f3',
                 cyan: '#79ffe1',
             },
