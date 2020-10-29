@@ -32,6 +32,10 @@ body {
     background: linear-gradient(0deg, #0a0d20 0%, #736f6e 100%);
 }
 
+.border-rounder-accent-6 {
+    box-shadow: 0 0 0 0.3em #74625b;
+}
+
 
 .st0{fill:#ABE8F3;}
 .st1{fill:#108095;}
