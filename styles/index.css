@@ -89,6 +89,9 @@ body {
     background-image: url("/images/dust-accent-3-white.png");
     background-image: url("/images/dust-accent-3-white.png"), linear-gradient(0deg, #0a0d20 0%, #736f6e 100%);
 }
+.bg-accent-4 {
+    background-image: url("/images/dust-white.png");
+}
 .bg-accent-11-transparent {
     background: #74625bAA;
     background: linear-gradient(0deg, transparent 0%, #74625bAA 100%);

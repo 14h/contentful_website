@@ -23,3 +23,4 @@ Global Drugs Survey main_website
 
 THINGS LEFT TO DO:
 1. Navigation is generated statically at the moment, it should be derived from the data coming from posts and how they are tagged
+2. Make nav bar on mobile collapsable
