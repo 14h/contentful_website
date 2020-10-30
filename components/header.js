@@ -1,8 +1,12 @@
 import Link from 'next/link'
+import {useState} from "react";
 
 export default function Header() {
+    const [nav_open, set_nav_open] = useState(false);
+
     return (
-        <div className="fixed top-0 left-0 right-0 h-20 z-50 flex flex-row justify-between items-center px-2 bg-accent-11-transparent">
+        <div
+            className="fixed top-0 left-0 right-0 h-20 z-50 flex flex-row justify-between items-center px-2 md:px-20 bg-accent-4 ">
             <Link href="/">
                 <div className='flex flex-row h-16 justify-center items-center'>
                     <svg
@@ -98,14 +102,103 @@ export default function Header() {
                             <polygon className="st0" points="47.3,49.5 37.9,44 28.6,49.5 37.9,54.8 	"/>
                         </g>
                     </svg>
-                    <a className="hover:underline font-bold text-xl italic">Global Drugs Survey</a>
+                    <a className="hover:underline font-bold text-xl italic hidden md:block">Global Drugs Survey</a>
                 </div>
             </Link>
-            <div className='flex flex-row h-full items-center hidden md:flex'>
-                <div className='mx-4'><Link href='/'><a>Surveys</a></Link></div>
-                <div className='mx-4'><Link href='/'><a>Blog</a></Link></div>
-                <div className='mx-4'><Link href='/'><a>About GDS</a></Link></div>
-                <div className='mx-4'><Link href='/'><a>Contact</a></Link></div>
+
+            <div className='flex flex-row h-full items-center  md:flex'>
+                <input type="text" placeholder='Search here'
+                       className='w-40 h-10 px-2 bg-accent-4 border-solid border-2 border-white '/>
+                {
+                    !nav_open && <svg
+                        onClick={() => set_nav_open(true)}
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        viewBox="0 0 512 512" xmlSpace="preserve" className='h-10 pl-8 fill-current text-white'>
+                        <path
+                            d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"/>
+                        <path
+                            d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
+                        <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+        C512,404.954,503.046,396,492,396z"/>
+                    </svg>
+                }{
+                nav_open &&
+                <svg
+                    onClick={() => set_nav_open(false)}
+                    version="1.1" x="0px" y="0px"
+                    viewBox="0 0 409.806 409.806" xmlSpace="preserve"
+                    className='h-10 pl-8 fill-current text-white'>
+                    <path d="M228.929,205.01L404.596,29.343c6.78-6.548,6.968-17.352,0.42-24.132c-6.548-6.78-17.352-6.968-24.132-0.42
+			c-0.142,0.137-0.282,0.277-0.42,0.42L204.796,180.878L29.129,5.21c-6.78-6.548-17.584-6.36-24.132,0.42
+			c-6.388,6.614-6.388,17.099,0,23.713L180.664,205.01L4.997,380.677c-6.663,6.664-6.663,17.468,0,24.132
+			c6.664,6.662,17.468,6.662,24.132,0l175.667-175.667l175.667,175.667c6.78,6.548,17.584,6.36,24.132-0.42
+			c6.387-6.614,6.387-17.099,0-23.712L228.929,205.01z"/>
+                </svg>
+            }
+
+                <div className={`fixed top-20 left-0 right-0 bg-accent-4 py-8 ${!nav_open ? 'hidden' : ''} `}>
+                    <div
+                        className='px-20 mx-auto grid grid-cols-1 md:grid-cols-6 md:col-gap-16 lg:col-gap-8 row-gap-8 md:row-gap-12'>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>GDS 2020</div>
+                            <div className='font-light mb-2'>GDS 2020: Alcohol and regret</div>
+                            <div className='font-light mb-2'>GDS 2020: Psychedelics under supervision</div>
+                            <div className='font-light mb-2'>GDS 2020: Medical Cannabis: so much promise, but the
+                                evidence is still thin. can you help
+                            </div>
+                            <div className='font-light mb-2'>GDS 2020: MDMA: not just about the dose but how you divide
+                                it (or not)
+                            </div>
+                            <div className='font-light mb-2'>GDS 2020: How 'drugs of abuse' are becoming new medicines
+                            </div>
+                            <div className='font-light mb-2'>GDS 2020: CBD - what is it really good for?</div>
+                            <div className='font-light mb-2'>GDS 2020: Are psychedelics your medicine?</div>
+                            <div className='font-light mb-2'>GDS 2020: Creating a safer nightlife across the globe</div>
+                        </div>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>GDS Surveys</div>
+                            <div className='font-light mb-2'>Why Global Drug Survey is running a UK cannabis survey?
+                            </div>
+                            <div className='font-light mb-2'>GDS Sample and characteristics</div>
+                            <div className='font-light mb-2'>Survey composition</div>
+                            <div className='font-light mb-2'>Ethics, Sharing & Security</div>
+                        </div>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>Past Findings</div>
+                            <div className='font-light mb-2'>GDS 2019</div>
+                            <div className='font-light mb-2'>GDS 2018</div>
+                            <div className='font-light mb-2'>GDS 2017</div>
+                            <div className='font-light mb-2'>GDS 2015</div>
+                            <div className='font-light mb-2'>GDS 2014</div>
+                            <div className='font-light mb-2'>YouTube videos of GDS findings</div>
+                            <div className='font-light mb-2'>Academic Articles</div>
+                        </div>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>Products and services
+                            </div>
+                            <div className='font-light mb-2'>Participant Recruitment and Survey Design</div>
+                            <div className='font-light mb-2'>Data Analysis and Report</div>
+                            <div className='font-light mb-2'>Data insight</div>
+                        </div>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>Free online resources
+                            </div>
+                            <div className='font-light mb-2'>Drinks Meter</div>
+                            <div className='font-light mb-2'>Drugs Meter</div>
+                            <div className='font-light mb-2'>Drugs Meter Mini</div>
+                            <div className='font-light mb-2'>Safer Use Limits</div>
+                            <div className='font-light mb-2'>One Too Many</div>
+                            <div className='font-light mb-2'>The Highway Code</div>
+                        </div>
+                        <div className='flex flex-col justify-center items-left self-start'>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>About GDS</div>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>IN THE MEDIA</div>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>CLIENTS & PARTNERS</div>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>BLOG</div>
+                            <div className='font-bold text-xl md:text-2xl text-accent-10 mb-4'>CONTACT</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
