@@ -101,7 +101,7 @@ export default function Header() {
                     <a className="hover:underline font-bold text-xl italic">Global Drugs Survey</a>
                 </div>
             </Link>
-            <div className='flex flex-row h-full items-center'>
+            <div className='flex flex-row h-full items-center hidden md:flex'>
                 <div className='mx-4'><Link href='/'><a>Surveys</a></Link></div>
                 <div className='mx-4'><Link href='/'><a>Blog</a></Link></div>
                 <div className='mx-4'><Link href='/'><a>About GDS</a></Link></div>

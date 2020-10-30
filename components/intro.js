@@ -14,7 +14,7 @@ export default function Intro() {
             <div className='flex flex-col items-left mx-8 md:mx-16 mt-40 z-10 w-screen-full md:w-1/2'>
 
                 <h1 className="text-4xl md:text-7xl font-hairline  md:pr-8">
-                    Welcome to <span className='italic capitalize font-bold'>Global Drugs Survey.</span>
+                    Welcome to <span className='italic-bold capitalize'>Global Drugs Survey.</span>
                 </h1>
                 <div className="text-2xl md:text-4xl font-hairline tracking-tighter leading-tight md:pr-8 my-12">
                     The worlds largest drug survey;

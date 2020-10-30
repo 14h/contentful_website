@@ -9,6 +9,59 @@
     font-family: GrifoS;
     src: url(/fonts/GrifoS.otf);
 }
+@font-face {
+    font-family: GrifoSBold;
+    src: url(/fonts/GrifoS-Bold.otf);
+}
+@font-face {
+    font-family: GrifoSBoldItalic;
+    src: url(/fonts/GrifoS-BoldItalic.otf);
+}
+@font-face {
+    font-family: GrifoSItalic;
+    src: url(/fonts/GrifoS-Italic.otf);
+}
+@font-face {
+    font-family: GrifoSLight;
+    src: url(/fonts/GrifoS-Light.otf);
+}
+@font-face {
+    font-family: GrifoSLightItalic;
+    src: url(/fonts/GrifoS-LightItalic.otf);
+}
+
+.italic {
+    font-style: normal;
+    font-family: GrifoSItalic, serif;
+}
+.italic-bold {
+    font-style: normal;
+    font-family: GrifoSBoldItalic, serif;
+}
+.non-italic {
+    font-style: normal;
+    font-family: GrifoS, serif;
+}
+.font-italic {
+    font-family: GrifoSItalic, serif;
+    font-weight: normal;
+}
+.font-bold {
+    font-family: GrifoSBold, serif;
+    font-weight: normal;
+}
+.font-light {
+    font-family: GrifoSLight, serif;
+    font-weight: normal;
+}
+.font-light-italic {
+    font-family: GrifoSLightItalic, serif;
+    font-weight: normal;
+}
+.font-bold-italic {
+    font-family: GrifoSBoldItalic, serif;
+    font-weight: normal;
+}
 
 body {
     font-family: GrifoS, serif;
