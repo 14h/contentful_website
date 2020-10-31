@@ -2,13 +2,14 @@ import {useRouter} from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
-import PostBody from '../../components/post-body'
 import Blog from '../../components/blog'
 import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
 import {getAllPostsWithSlug, getPostAndMorePosts} from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import DateComponent from "../../components/date";
+import markdownStyles from "../../components/markdown-styles.module.css";
+import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
+import PostPreview from "../../components/post-preview";
 
 export default function Post({post, morePosts}) {
     const router = useRouter()
@@ -22,9 +23,9 @@ export default function Post({post, morePosts}) {
             <Container>
                 <Header/>
                 {router.isFallback ? (
-                    <PostTitle>Loading…</PostTitle>
+                    <div className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>Loading…</div>
                 ) : (
-                    <>
+                    <div className=' bg-accent-4'>
                         <article>
                             <Head>
                                 <title>
@@ -32,17 +33,44 @@ export default function Post({post, morePosts}) {
                                 </title>
                                 <meta property="og:image" content={post.coverImage.url}/>
                             </Head>
-                            <PostHeader
-                                title={post.title}
-                                coverImage={post.coverImage}
-                                date={post.date}
-                            />
-                            <PostBody content={post.content}/>
+                            <div className="mt-20 max-w-6xl mx-auto">
+                                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
+                                    {post.title}
+                                </h1>
+                                <img
+                                    src={post.coverImage.url}
+                                    alt={`Cover Image for ${post.title}`}
+                                    className='shadow-small mx-auto mb-16 w-full'
+                                />
+                                <div className="mb-6 text-lg">
+                                    <DateComponent dateString={post.date}/>
+                                </div>
+                                <div className={markdownStyles['markdown']}>
+                                    {documentToReactComponents(post.content)}
+                                </div>
+                            </div>
                         </article>
                         {morePosts && morePosts.length > 0 && (
-                            <Blog posts={morePosts}/>
+                            <section
+                                className="bg-accent-4 md:h-1/2 relative p-12 text-center pt-0"
+                            >
+                                <h1 className="text-4xl mb-12 md:text-7xl font-bold tracking-tighter leading-tight md:pr-8 text-center text-white">
+                                    Latest Posts
+                                </h1>
+                                <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-8 md:row-gap-12 mb-32">
+                                    {morePosts.map((post) => (
+                                        <PostPreview
+                                            key={post.slug}
+                                            title={post.title}
+                                            coverImage={post.coverImage}
+                                            date={post.date}
+                                            slug={post.slug}
+                                        />
+                                    ))}
+                                </div>
+                            </section>
                         )}
-                    </>
+                    </div>
                 )}
             </Container>
         </Layout>
