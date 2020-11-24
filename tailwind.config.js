@@ -2,22 +2,22 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                light: {raw: "(prefers-color-scheme: light)"},
-                dark: {raw: "(prefers-color-scheme: dark)"}
+                // light: {raw: "(prefers-color-scheme: light)"},
+                // dark: {raw: "(prefers-color-scheme: dark)"}
             },
             colors: {
-                'accent-1': '#74625b',
-                'accent-2': '#16192c',
-                'accent-3': '#764a3b',
-                'accent-4': '#16192c',
-                'accent-5': '#0a0d20',
-                'accent-6': '#74625b',
-                'accent-7': '#333333',
-                'accent-8': '#ebeff1',
-                'accent-9': '#736f6e',
-                'accent-10': '#b0b0d4',
-                'accent-11': '#74625b88',
-                'accent-12': '#74625bBB',
+                'accent-1': '#FFFFFF',
+                // 'accent-2': '#16192c',
+                // 'accent-3': '#764a3b',
+                // 'accent-4': '#16192c',
+                // 'accent-5': '#0a0d20',
+                // 'accent-6': '#74625b',
+                // 'accent-7': '#333333',
+                // 'accent-8': '#ebeff1',
+                // 'accent-9': '#736f6e',
+                // 'accent-10': '#b0b0d4',
+                // 'accent-11': '#74625b88',
+                // 'accent-12': '#74625bBB',
                 success: '#0070f3',
                 cyan: '#79ffe1',
             },
@@ -43,19 +43,5 @@ module.exports = {
         },
     },
     plugins: [
-        function ({addBase, config}) {
-            addBase({
-                body: {
-                    color: config("theme.colors.black"),
-                    backgroundColor: config("theme.colors.white")
-                },
-                "@screen dark": {
-                    body: {
-                        color: config("theme.colors.white"),
-                        backgroundColor: config("theme.colors.black")
-                    }
-                }
-            });
-        }
     ]
 }

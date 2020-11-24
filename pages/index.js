@@ -1,29 +1,21 @@
 import Container from '../components/container'
-import Blog from '../components/blog'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
-import {getAllPostsForHome} from '../lib/api'
+import {get_all_projects} from '../lib/api'
 import Head from 'next/head'
-import NewReports from "../components/new-reports";
-import MediaPartners from "../components/media-partners";
-import WhyBanner from "../components/why-banner";
 import Header from "../components/header";
 
-export default function Index({allPosts}) {
-    const posts = allPosts.slice(0)
+export default function Index({projects}) {
+
+    console.log(projects);
+
     return (
         <>
             <Layout>
                 <Head>
-                    <title>Global Drugs Survey</title>
                 </Head>
                 <Container>
-                    <Header />
-                    <Intro/>
-                    <NewReports/>
-                    <MediaPartners/>
-                    {posts.length > 0 && <Blog posts={posts}/>}
-                    <WhyBanner/>
+                    <Header
+                    />
                 </Container>
             </Layout>
         </>
@@ -31,8 +23,10 @@ export default function Index({allPosts}) {
 }
 
 export async function getStaticProps() {
-    const allPosts = await getAllPostsForHome()
+    const projects = await get_all_projects()
     return {
-        props: {allPosts},
+        props: {
+            projects
+        },
     }
 }
