@@ -60,11 +60,11 @@ export default function Post({project}) {
                                             onChange={setValue}
                                         >
                                             {
-                                                project.images.map(
+                                                project.images?.map(
                                                     (img, key) => (
                                                         <img
                                                             key={key}
-                                                            src={img.fields.file.url}
+                                                            src={img?.fields?.file?.url ?? ''}
                                                         />
                                                     )
                                                 )
@@ -73,13 +73,14 @@ export default function Post({project}) {
                                         <Dots
                                             value={value}
                                             onChange={setValue}
+                                            number={4}
                                             thumbnails={
                                                 project.images.map(
                                                     (img, key) => (
                                                         <img
                                                             key={key}
                                                             className="h-32"
-                                                            src={img.fields.file.url}
+                                                            src={img?.fields?.file?.url ?? ''}
                                                         />
                                                     )
                                                 )

@@ -33,6 +33,11 @@ body {
     src: url(/fonts/GrifoS-LightItalic.otf);
 }
 
+@font-face {
+    font-family: 'mushroom';
+    src: url(/fonts/mushroom.ttf)  format('truetype')
+}
+
 .italic {
     font-style: normal;
     font-family: GrifoSItalic, serif;
@@ -66,6 +71,11 @@ body {
     font-weight: normal;
 }
 
+.font-mushroom {
+    font-family: mushroom, serif;
+    font-weight: normal;
+}
+
 body {
     font-family: GrifoS, serif;
 }
@@ -76,4 +86,38 @@ body {
 
 .blur {
     filter: blur(4px);
+}
+.container {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container-l {
+        max-width: 640px
+    }
+}
+@media (min-width: 768px) {
+    .container-l {
+        max-width: 768px
+    }
+}
+@media (min-width: 1024px) {
+    .container-l {
+        max-width:1024px
+    }
+}
+@media (min-width: 1280px) {
+    .container-l {
+        max-width:1440px!important;
+    }
+}
+
+.left-4 {
+    left: 1rem;
+}
+.right-4 {
+    right: 1rem;
+}
+.bottom-8 {
+    bottom: 2rem;
 }
